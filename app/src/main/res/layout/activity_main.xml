@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/peso"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Peso : "
+        app:layout_constraintBottom_toTopOf="@+id/sexo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/editpeso"
+        app:layout_constraintTop_toTopOf="parent" />
+    <EditText
+        android:id="@+id/editpeso"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@+id/peso"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/sexo"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/sexo"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Sexo : "
+        app:layout_constraintBottom_toTopOf="@id/copos"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/editsexo"
+        app:layout_constraintTop_toBottomOf="@id/peso" />
+
+    <EditText
+        android:id="@+id/editsexo"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@+id/sexo"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/copos"
+        app:layout_constraintTop_toBottomOf="@id/peso"/>
+    <TextView
+        android:id="@+id/copos"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="N de copos : "
+        app:layout_constraintBottom_toTopOf="@id/jejum"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/editcopos"
+        app:layout_constraintTop_toBottomOf="@id/sexo" />
+    <EditText
+        android:id="@+id/editcopos"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@+id/copos"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/jejum"
+        app:layout_constraintTop_toBottomOf="@id/sexo"/>
+    <TextView
+        android:id="@+id/jejum"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="está de jejum ? "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/editjejum"
+        app:layout_constraintTop_toBottomOf="@id/copos" />
+    <EditText
+        android:id="@+id/editjejum"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@+id/jejum"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/copos"/>
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="Enviar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editjejum"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
